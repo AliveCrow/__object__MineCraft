@@ -1,14 +1,6 @@
 const string =
   `
-.Godo-header {
-  left: 120px;
-  transform-origin: bottom center;
-  transform-style: preserve-3d;
-}
-.Head>div {
-  height: 80px;
-  width: 80px;
-}
+
 .Head-top {
   background-position: -80px 0px;
   transform: rotateX(90deg) translateZ(40px);
