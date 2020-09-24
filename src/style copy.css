@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.u-bg {
+  background-color: #f6f6f6;
+  background-image: url('http://qiniu.dreamsakula.top/images/20200923144136.png');
+}
+
+body {
+  background: rgb(104, 176, 171);
+  background: radial-gradient(circle, rgba(104, 176, 171, 1) 0%, rgba(236, 244, 243, 1) 0%, rgba(236, 244, 243, 1) 0%, rgba(104, 176, 171, 1) 100%);
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.Scene {
+  height: 100%;
+  width: 100%;
+  perspective: 900px;
+  position: absolute;
+  z-index: -1;
+}
+
+
+.Godo {
+  height: 320px;
+  width: 320px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  margin-top: -160px;
+  margin-left: -160px;
+  transform-style: preserve-3d;
+  animation: rotatD 10s linear infinite;
+}
+
+.Godo>div {
+  position: absolute;
+}
+
+.Godo-warp {
+  cursor: move;
+  height: 320px;
+  width: 320px;
+  left: 50%;
+  margin-left: -160px;
+  margin-top: -160px;
+  position: absolute;
+  top: 50%;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+
+.LeftLeg,
+.RightLeg,
+.RightArm,
+.LeftArm {
+  height: 120px;
+  width: 40px;
+  left: 120px;
+  top: 80px;
+  transform-style: preserve-3d;
+  transform-origin: top center;
+  position: absolute;
+}
+
+/* .LeftLeg>div,
+.RightLeg>div,
+.RightArm>div,
+.LeftArm>div {
+  height: 120px;
+  width: 40px;
+} */
+
+.legs {
+  width: 80px;
+  height: 120px;
+  top: 200px;
+  left: 120px;
+  transform-origin: top center;
+  transform-style: preserve-3d;
+}
+
+.Godo-header {
+  left: 120px;
+  transform-origin: bottom center;
+  transform-style: preserve-3d;
+}
+
+.Head {
+  /* animation: HeadAnimation 1s infinite; */
+  /* height: 80px;
+  width: 80px; */
+  /* transform-style: preserve-3d; */
+}
+
+.Head>div {
+  height: 80px;
+  width: 80px;
+}
+
+.Head-top {
+  background-position: -80px 0px;
+  transform: rotateX(90deg) translateZ(40px);
+}
+
+.Head-front {
+  background-position: -80px -80px;
+  transform: rotateY(0deg) translateZ(40px) translateY(-80px)
+}
+
+.Head-left {
+  background-position: 0px -80px;
+  transform: rotateY(-90deg) translateZ(40px) translateY(-160px)
+}
+
+.Head-right {
+  background-position: -160px -80px;
+  transform: rotateY(90deg) translateZ(40px) translateY(-240px)
+}
+
+.Head-back {
+  background-position: -240px -80px;
+  transform: rotateX(180deg) translateZ(40px) scaleY(-1) translateY(-320px)
+}
+
+.Head-bottom {
+  background-position: -160px 0px;
+  transform: rotateX(-90deg) translateZ(-360px)
+}
+
+.Torso {
+  /* animation: HeadAnimation 1s infinite; */
+  left: 120px;
+  top: 80px;
+}
+
+.Torso>div {
+  height: 120px;
+  width: 80px;
+}
+
+.Torso-top {
+  height: 40px !important;
+  background-position: -200px -160px;
+  transform: rotateX(90deg) translateZ(20px)
+}
+
+.Torso-front {
+  background-position: -200px -200px;
+  transform: rotateY(0deg) translateZ(20px) translate(0px, -40px)
+}
+
+.Torso-left {
+  background-position: -160px -200px;
+  width: 40px !important;
+  transform: rotateY(-90deg) translateZ(20px) translate(0px, -160px)
+}
+
+.Torso-right {
+  width: 40px !important;
+  background-position: -280px -200px;
+  transform: rotateY(90deg) translateZ(60px) translate(0px, -280px)
+}
+
+.Torso-back {
+  background-position: -320px -200px;
+  transform: rotateX(180deg) translateZ(20px) scaleY(-1) translate(0px, -400px)
+}
+
+.Torso-bottom {
+  height: 40px !important;
+  background-position: -280px 160px;
+  transform: rotateX(-90deg) translateZ(-420px)
+}
+
+
+.LeftLeg>div,
+.RightLeg>div,
+.RightArm>div,
+.LeftArm>div {
+  height: 120px;
+  width: 40px;
+}
+
+.LeftArm {
+  left: 80px;
+  animation: ArmLeft 1s infinite;
+}
+
+.LeftArm-top {
+  height: 40px !important;
+  background-position: -440px -160px;
+  transform: rotateX(90deg) translateZ(20px)
+}
+
+.LeftArm-front {
+  background-position: -440px -200px;
+  transform: rotateY(0deg) translateZ(20px) translate(0px, -40px)
+}
+
+.LeftArm-left {
+  background-position: -400px -200px;
+  /* width: 40px !important; */
+  transform: rotateY(-90deg) translateZ(20px) translate(0px, -160px)
+}
+
+.LeftArm-right {
+  width: 40px !important;
+  background-position: -480px -200px;
+  transform: rotateY(90deg) translateZ(20px) translate(0px, -280px)
+}
+
+.LeftArm-back {
+  background-position: -520px -200px;
+  transform: rotateX(180deg) translateZ(20px) scaleY(-1) translate(0px, -400px)
+}
+
+.LeftArm-bottom {
+  height: 40px !important;
+  background-position: -480px -160px;
+  transform: rotateX(-90deg) translateZ(-420px)
+}
+
+
+
+.RightArm {
+  left: 200px;
+  animation: ArmRight 1s infinite;
+}
+
+.RightArm-top {
+  height: 40px !important;
+  background-position: -440px -160px;
+  transform: rotateX(90deg) translateZ(20px)
+}
+
+.RightArm-front {
+  background-position: -440px -200px;
+  transform: rotateY(0deg) translateZ(20px) translate(0px, -40px)
+}
+
+.RightArm-left {
+  background-position: -480px -200px;
+  transform: rotateY(-90deg) translateZ(20px) translate(0px, -160px)
+}
+
+.RightArm-right {
+  /* width: 40px !important; */
+  background-position: -400px -200px;
+  transform: rotateY(90deg) translateZ(20px) translate(0px, -280px)
+}
+
+.RightArm-back {
+  background-position: -520px -200px;
+  transform: rotateX(180deg) translateZ(20px) scaleY(-1) translate(0px, -400px)
+}
+
+.RightArm-bottom {
+  height: 40px !important;
+  background-position: -480px -160px;
+  transform: rotateX(-90deg) translateZ(-420px)
+}
+
+
+.LeftLeg {
+  animation: ArmRight 1s infinite;
+  top: 0;
+  left: 0;
+}
+
+.LeftLeg-top {
+  height: 40px !important;
+  background-position: -40px -160px;
+  transform: rotateX(90deg) translateZ(20px)
+}
+
+.LeftLeg-front {
+  background-position: -40px -200px;
+  transform: rotateY(0deg) translateZ(20px) translate(0px, -40px)
+}
+
+.LeftLeg-left {
+  background-position: -0 -200px;
+  /* width: 40px !important; */
+  transform: rotateY(-90deg) translateZ(20px) translate(0px, -160px)
+}
+
+.LeftLeg-right {
+  /* width: 40px !important; */
+  background-position: -80px -200px;
+  transform: rotateY(90deg) translateZ(20px) translate(0px, -280px)
+}
+
+.LeftLeg-back {
+  background-position: -120px -200px;
+  transform: rotateX(180deg) translateZ(20px) scaleY(-1) translate(0px, -400px)
+}
+
+.LeftLeg-bottom {
+  height: 40px !important;
+  background-position: -80px -160px;
+  transform: rotateX(-90deg) translateZ(-420px)
+}
+
+.RightLeg {
+  top: 0;
+  left: 40px;
+  animation: ArmLeft 1s infinite;
+}
+
+.RightLeg-top {
+  height: 40px !important;
+  background-position: -40px -160px;
+  transform: rotateX(90deg) translateZ(20px)
+}
+
+.RightLeg-front {
+  background-position: -40px -200px;
+  transform: rotateY(0deg) translateZ(20px) translate(0px, -40px)
+}
+
+.RightLeg-left {
+  background-position: -80px -200px;
+  transform: rotateY(-90deg) translateZ(20px) translate(0px, -160px)
+}
+
+.RightLeg-right {
+  background-position: -0 -200px;
+  transform: rotateY(90deg) translateZ(20px) translate(0px, -280px)
+}
+
+.RightLeg-back {
+  background-position: -120px -200px;
+  transform: rotateX(180deg) translateZ(20px) scaleY(-1) translate(0px, -400px)
+}
+
+.RightLeg-bottom {
+  height: 40px !important;
+  background-position: -80px -160px;
+  transform: rotateX(-90deg) translateZ(-420px)
+}
+
+.base {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.25) 5%, transparent 65%);
+  height: 320px;
+  left: 50%;
+  margin-left: -160px;
+  margin-top: -160px;
+  position: absolute;
+  top: 80%;
+  transform: rotateX(90deg) translateZ(90px);
+  width: 320px;
+
+}
+
+#container {
+  display: flex;
+}

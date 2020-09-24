@@ -1,0 +1,51 @@
+@keyframes rotatD {
+  0% {
+    transform: scale(1) rotate3d(0, 1, 0, 0deg);
+  }
+
+  100% {
+    transform: scale(1) rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes ArmLeft {
+  0% {
+    transform: rotateX(-30deg)
+  }
+
+  50% {
+    transform: rotateX(30deg)
+  }
+
+  100% {
+    transform: rotateX(-30deg)
+  }
+}
+
+@keyframes ArmRight {
+  0% {
+    transform: rotateX(30deg)
+  }
+
+  50% {
+    transform: rotateX(-30deg)
+  }
+
+  100% {
+    transform: rotateX(30deg)
+  }
+}
+
+/* @keyframes HeadAnimation {
+  0% {
+    transform: rotateY(5deg)
+  }
+
+  50% {
+    transform: rotateY(-5deg)
+  }
+
+  100% {
+    transform: rotateY(5deg)
+  }
+} */
