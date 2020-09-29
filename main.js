@@ -253,6 +253,7 @@ group1.on('click', () => {
   console.log('233');
   $('#showCode').css('left') === '-400px' ? $('#showCode').animate({ left: '0px' }, 'slow') : $('#showCode').animate({ left: '-400px' }, 'slow')
 })
+
 const player = {
   n: 1,
   playStatus: true,
