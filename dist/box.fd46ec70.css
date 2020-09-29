@@ -1,0 +1,68 @@
+#container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.group1 {
+  min-height: 50px;
+  min-width: 25px;
+  background-color: #f8d64d;
+  color: #fff;
+  position: absolute;
+  bottom: 350px;
+  left: 400px;
+  z-index: 999;
+
+}
+
+.group1>img:hover {
+  transform: rotate(-90deg) scale(1.3);
+}
+
+.group1>img {
+  transition: all .2s linear;
+  width: 24px;
+  transform: rotate(-90deg) scale(1.1);
+  position: absolute;
+  top: 17px
+}
+
+#showCode {
+  height: 600px;
+  width: 400px;
+  position: absolute;
+  background-color: #f9f6ee;
+  color: #4f4e4d;
+  bottom: 0;
+  left: 0px;
+  overflow-y: scroll;
+  padding: 20px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+#showCode::-webkit-scrollbar {
+  width: 5px;
+}
+
+.group2 {
+  /* position: relative; */
+  width: 100%;
+}
+
+.btnGroup {
+  min-width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  z-index:9999;
+}
+
+button {
+  padding: 5px 20px;
+  margin-bottom: 100px;
+  margin-left: 20px;
+}
+
+/*# sourceMappingURL=/box.fd46ec70.css.map */

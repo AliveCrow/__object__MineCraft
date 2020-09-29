@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="author" content="grit">
+    <!-- <link rel="stylesheet" href="./animation.css" /> -->
+    <link rel="stylesheet" href="/style.e308ff8e.css">
+    <link rel="stylesheet" href="/box.fd46ec70.css">
+    <title>Minecraft</title>
+<script src="/style.e308ff8e.js"></script><script src="/box.fd46ec70.js"></script></head>
+
+<body>
+<style id="aniBtn"></style>
+<style id="codeCss"></style>
+<div id="container">
+    <div class="btnGroup">
+        <button id="speed-slow">减速</button>
+        <button id="pause">暂停</button>
+        <button id="speed-up">加速</button>
+<!--        <button id="ani-on">开启动画</button>  -->
+    </div>
+    <div class="group1">
+        <img class="gimg" src="/open.55816c02.png" alt="">
+    </div>
+    <div id="showCode"></div>
+</div>
+<!-- <img class="testImg" src="http://qiniu.dreamsakula.top/images/20200923144136.png" alt="" /> -->
+<div class="Scene">
+    <div class="Godo-warp">
+        <div class="Godo">
+            <div class="Godo-header">
+                <div class="Head">
+                    <div class="Head-top u-bg"></div>
+                    <div class="Head-front u-bg"></div>
+                    <div class="Head-left u-bg"></div>
+                    <div class="Head-right u-bg"></div>
+                    <div class="Head-back u-bg"></div>
+                    <div class="Head-bottom u-bg"></div>
+                </div>
+            </div>
+            <div class="Torso">
+                <div class="Torso-top u-bg"></div>
+                <div class="Torso-front u-bg"></div>
+                <div class="Torso-left u-bg"></div>
+                <div class="Torso-right u-bg"></div>
+                <div class="Torso-back u-bg"></div>
+                <div class="Torso-bottom u-bg"></div>
+            </div>
+            <div class="LeftArm">
+                <div class="LeftArm-top u-bg"></div>
+                <div class="LeftArm-front u-bg"></div>
+                <div class="LeftArm-left u-bg"></div>
+                <div class="LeftArm-right u-bg"></div>
+                <div class="LeftArm-back u-bg"></div>
+                <div class="LeftArm-bottom u-bg"></div>
+            </div>
+            <div class="RightArm">
+                <div class="RightArm-top u-bg"></div>
+                <div class="RightArm-front u-bg"></div>
+                <div class="RightArm-left u-bg"></div>
+                <div class="RightArm-right u-bg"></div>
+                <div class="RightArm-back u-bg"></div>
+                <div class="RightArm-bottom u-bg"></div>
+            </div>
+            <div class="legs">
+                <div class="LeftLeg">
+                    <div class="LeftLeg-top u-bg"></div>
+                    <div class="LeftLeg-front u-bg"></div>
+                    <div class="LeftLeg-left u-bg"></div>
+                    <div class="LeftLeg-right u-bg"></div>
+                    <div class="LeftLeg-back u-bg"></div>
+                    <div class="LeftLeg-bottom u-bg"></div>
+                </div>
+                <div class="RightLeg">
+                    <div class="RightLeg-top u-bg"></div>
+                    <div class="RightLeg-front u-bg"></div>
+                    <div class="RightLeg-left u-bg"></div>
+                    <div class="RightLeg-right u-bg"></div>
+                    <div class="RightLeg-back u-bg"></div>
+                    <div class="RightLeg-bottom u-bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="base"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/main.1f19ae8e.js"></script>
+<script src="/css.16d824bf.js"></script>
+<script>console.log('233');
+var Godo = document.querySelector('.Godo');
+var Scene = document.querySelector('.Scene');
+var axis = {
+  rx: 0,
+  ry: 0
+};
+var hammertime = new Hammer(Scene);
+hammertime.on('panmove', function (event) {
+  axis.rx = event.deltaX;
+  axis.ry = event.deltaY;
+  TweenMax.to(Godo, 1, {
+    'rotationY': axis.rx,
+    'rotationX': axis.ry,
+    // overwrite: 1,
+    ease: Strong.easeOut
+  });
+});
+hammertime.on("panend", function (event) {
+  axis.rx = event.deltaX;
+  axis.ry = event.deltaY;
+});</script>
+</body>
+</html>
